@@ -4,3 +4,4 @@
 # 上传进度
 - CMSIS文件夹
 - PATH文件
+- User文件夹
