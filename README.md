@@ -31,3 +31,8 @@
 ## delay文件
 - 不精确的延时函数
 ---
+---
+## Precise_delay文件
+- 精确的延时函数
+- 使用delay_time(int times)函数即可进行给定ms的延时
+---
