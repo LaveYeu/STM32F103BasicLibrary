@@ -1,12 +1,11 @@
 #ifndef __MPU_I2C_H
 #define __MPU_I2C_H
 
-#include "headfile.h"
 
 #define  I2C_WR	     0
 #define  I2C_RD	     1
 
-//MPU IIC¶Ë¿Ú¶¨Òå
+//MPU IICï¿½Ë¿Ú¶ï¿½ï¿½ï¿½
 #define  MPU_GPIO_CLK           RCC_APB2Periph_GPIOB
 #define  MPU_SCL_GPIO_PORT      GPIOB
 #define  MPU_SCL_GPIO_PIN       GPIO_Pin_8
@@ -14,13 +13,13 @@
 #define  MPU_SDA_GPIO_PIN       GPIO_Pin_9
 #define  MPU_SDA_PIN_NUMBER     9  //GPIO_Pin_8
 
-//IO ÊäÈëÊä³öÅäÖÃ
-#if 0 /* Ìõ¼þ±àÒë 1  MPU_IIC_SDA_PIN µÍ°ËÎ» GPIO_Pin_0~7   */
+//IO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#if 0 /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1  MPU_IIC_SDA_PIN ï¿½Í°ï¿½Î» GPIO_Pin_0~7   */
 #define  MPU_SDA_PIN_CRLH_SET     (4*(MPU_SDA_PIN_NUMBER-0))
 #define  MPU_SDA_PIN_CRLH_RES     (0XFFFFFFFF-(0XF<<MPU_SDA_PIN_CRLH_SET))
 #define  MPU_SDA_IN()  {MPU_SDA_GPIO_PORT->CRL&=MPU_SDA_PIN_CRLH_RES;MPU_SDA_GPIO_PORT->CRL|=8<<MPU_SDA_PIN_CRLH_SET;}
 #define  MPU_SDA_OUT() {MPU_SDA_GPIO_PORT->CRL&=MPU_SDA_PIN_CRLH_RES;MPU_SDA_GPIO_PORT->CRL|=3<<MPU_SDA_PIN_CRLH_SET;}
-#else /* Ìõ¼þ±àÒë 0  MPU_IIC_SDA_PIN ¸ß°ËÎ» GPIO_Pin_8~15  */
+#else /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0  MPU_IIC_SDA_PIN ï¿½ß°ï¿½Î» GPIO_Pin_8~15  */
 #define  MPU_SDA_PIN_CRLH_SET     (4*(MPU_SDA_PIN_NUMBER-8))
 #define  MPU_SDA_PIN_CRLH_RES     (0XFFFFFFFF-(0XF<<MPU_SDA_PIN_CRLH_SET))
 #define  MPU_SDA_IN()  {MPU_SDA_GPIO_PORT->CRH&=MPU_SDA_PIN_CRLH_RES;MPU_SDA_GPIO_PORT->CRH|=8<<MPU_SDA_PIN_CRLH_SET;}
