@@ -18,42 +18,44 @@
 
 ---
 ## Comopenmv文件
-
+- Openmv通信文件
 #### 内部文件
-- 
-- 
+- Comopenmv.c
+- Comopenmv.h
 #### 前置文件
-- 
+- stm32f10x.h 
 ---
 
 ---
 ## delay文件
 - 不精确的延时函数
 #### 内部文件
-- 
-- 
+- delay.c
+- delay.h
 #### 前置文件
-- 
+- stm32f10x.h
+- delay.h
 ---
 
 ---
 ## encoder文件
 - 霍尔编码器配置文件
 #### 内部文件
-- .c --> 编码器TIM初始化
-- .h --> 基本不用更改
+- encoder.c --> 编码器TIM初始化
+- encoder.h --> 基本不用更改
 #### 前置文件： 
  - sys.h
 ---
 
 ---
 ## GPIO文件
-
+- 对GPIO进行初始化
+- 在头文件中开放define即可
 #### 内部文件
-- 
-- 
+- GPIO.c
+- GPIO.h
 #### 前置文件
-- 
+- stm32f10x.h
 ---
 
 ---
